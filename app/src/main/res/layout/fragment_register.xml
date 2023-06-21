@@ -90,10 +90,10 @@
             app:layout_constraintTop_toBottomOf="@id/password_text_field" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/idfa_checkbox"
+            android:id="@+id/gaid_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_idfa_checkbox"
+            android:text="@string/label_gaid_checkbox"
             app:layout_constraintTop_toBottomOf="@id/privacy_policy_checkbox" />
 
         <com.google.android.material.button.MaterialButton
@@ -103,7 +103,7 @@
             android:layout_marginTop="@dimen/margin"
             android:text="@string/register_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/idfa_checkbox" />
+            app:layout_constraintTop_toBottomOf="@id/gaid_checkbox" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
