@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Lytics Demo App</string>
-    <string name="title_activity_demo">DemoActivity</string>
+    <string name="app_name">Lytics SDK Showcase</string>
+    <string name="title_activity_demo">Lytics SDK Showcase</string>
     <string name="title_profile">Profile</string>
     <string name="title_events">Events</string>
     <string name="title_event_detail">Event Detail</string>
@@ -13,7 +13,7 @@
     <string name="hint_password">Password</string>
     <string name="logged_in">Logged in!</string>
     <string name="signed_up">Signed up!</string>
-    <string name="idfa_prompt">Lytics Demo would like permission to track you across apps and websites owned by other companies. Your data will be used to improve your experience with better personalization.</string>
+    <string name="gaid_prompt">Lytics Demo would like permission to track you across apps and websites owned by other companies. Your data will be used to improve your experience with better personalization.</string>
     <string name="allow_tracking">Allow Tracking</string>
     <string name="do_no_track">Ask App Not to Track</string>
     <string name="welcome">Welcome!</string>
@@ -25,7 +25,7 @@
     <string name="hint_name">Name</string>
     <string name="label_privacy_policy_checkbox">I have read and agree with the Terms and Conditions and the Privacy Policy.</string>
     <string name="register_button">Complete</string>
-    <string name="label_idfa_checkbox">Improve my experience with better personalization (IDFA demo).</string>
+    <string name="label_gaid_checkbox">Improve my experience with better personalization (GAID demo).</string>
     <string name="near_you">Near you</string>
     <string name="popular">Popular</string>
     <string name="buy_tickets">Buy tickets</string>

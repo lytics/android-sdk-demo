@@ -1,7 +1,6 @@
 package com.lytics.android.demo.ui.account
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -37,8 +36,8 @@ class RegisterFragment : Fragment() {
 
             val tac: Boolean = it.consent?.get("tac") as? Boolean ?: false
             binding.privacyPolicyCheckbox.isChecked = tac
-            val idfa: Boolean = it.consent?.get("idfa") as? Boolean ?: false
-            binding.idfaCheckbox.isChecked = idfa
+            val gaid: Boolean = it.consent?.get("gaid") as? Boolean ?: false
+            binding.gaidCheckbox.isChecked = gaid
         }
 
         binding.registerButton.setOnClickListener {
@@ -55,29 +54,29 @@ class RegisterFragment : Fragment() {
             val termsAndConditions = binding.privacyPolicyCheckbox.isChecked
             Lytics.consent(LyticsConsentEvent(name = "android consent", consent = mapOf("tac" to termsAndConditions)))
 
-            val idfa = binding.idfaCheckbox.isChecked
-            Lytics.consent(LyticsConsentEvent(name = "android consent", consent = mapOf("idfa" to idfa)))
+            val gaid = binding.gaidCheckbox.isChecked
+            Lytics.consent(LyticsConsentEvent(name = "android consent", consent = mapOf("gaid" to gaid)))
 
             Toast.makeText(requireContext(), R.string.signed_up, Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.navigation_events)
         }
 
-        binding.idfaCheckbox.setOnClickListener {
-            val idfa = binding.idfaCheckbox.isChecked
-            if (idfa) {
+        binding.gaidCheckbox.setOnClickListener {
+            val gaid = binding.gaidCheckbox.isChecked
+            if (gaid) {
                 val builder = AlertDialog.Builder(requireContext())
                 builder.apply {
-                    setMessage(R.string.idfa_prompt)
+                    setMessage(R.string.gaid_prompt)
                     setPositiveButton(R.string.allow_tracking) { _, _ ->
-                        Lytics.enableIDFA()
+                        Lytics.enableGAID()
                     }
                     setNegativeButton(R.string.do_no_track) { _, _ ->
-                        binding.idfaCheckbox.isChecked = false
+                        binding.gaidCheckbox.isChecked = false
                     }
                 }
                 builder.create().show()
             } else {
-                Lytics.disableIDFA()
+                Lytics.disableGAID()
             }
         }
 
